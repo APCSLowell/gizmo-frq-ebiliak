@@ -27,7 +27,7 @@ public class OnlinePurchaseManager
   {
     for(int i = 0; i < purchases.size()-1; i++){
       Gizmo d = purchases(i);
-      Gizmo s = purchases(i+1)
+      Gizmo s = purchases(i+1);
         if(d.equals(s)){
         return true;
       }
