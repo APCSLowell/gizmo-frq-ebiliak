@@ -11,9 +11,10 @@ public class OnlinePurchaseManager
   */
   public int countElectronicsByMaker(String maker)
   {
+    int count = 0;
     for(int i = 0; i < purchases.size(); i++){
       Gizmo g = purchases(i);
-      if( g.isElectronic() && g.isMaker().equals(maker)){
+      if( g.isElectronic() && g.getMaker().equals(maker)){
         return count ++;
       }
     }
