@@ -13,9 +13,9 @@ public class OnlinePurchaseManager
   {
     int count = 0;
     for(int i = 0; i < purchases.size(); i++){
-      Gizmo g = purchases(i);
+      Gizmo g = purchases.get(i);
       if( g.isElectronic() && g.getMaker().equals(maker)){
-        return count ++;
+   count ++;
       }
     }
     return count;
@@ -27,8 +27,8 @@ public class OnlinePurchaseManager
   public boolean hasAdjacentEqualPair()
   {
     for(int i = 0; i < purchases.size()-1; i++){
-      Gizmo d = purchases(i);
-      Gizmo s = purchases(i+1);
+      Gizmo d = purchases.get(i);
+      Gizmo s = purchases.get(i+1);
         if(d.equals(s)){
         return true;
       }
